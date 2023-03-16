@@ -1,6 +1,5 @@
 import View from './view.js';
 import icons from 'url:../../img/icons.svg'; //type (url:path)for any data except programming files
-import { Fraction } from 'fractional';
 
 class RecipeView extends View {
   _parentElement = document.querySelector('.recipe');
@@ -69,8 +68,12 @@ class RecipeView extends View {
           </button>
         </div>
 
-        <div class="recipe__ingredients ${window.matchMedia &&
-      window.matchMedia('(prefers-color-scheme: dark)').matches?"recipe__details--dark-mode":""}">
+        <div class="recipe__ingredients ${
+          window.matchMedia &&
+          window.matchMedia('(prefers-color-scheme: dark)').matches
+            ? 'recipe__details--dark-mode'
+            : ''
+        }">
           <h2 class="heading--2">Recipe ingredients</h2>
           <ul class="recipe__ingredient-list">
             ${this._data.ingredients
@@ -79,8 +82,12 @@ class RecipeView extends View {
           </ul>
         </div>
 
-        <div class="recipe__directions ${window.matchMedia &&
-      window.matchMedia('(prefers-color-scheme: dark)').matches?"recipe__details--dark-mode":""}">
+        <div class="recipe__directions ${
+          window.matchMedia &&
+          window.matchMedia('(prefers-color-scheme: dark)').matches
+            ? 'recipe__details--dark-mode'
+            : ''
+        }">
           <h2 class="heading--2">How to cook it</h2>
           <p class="recipe__directions-text">
             This recipe was carefully designed and tested by
@@ -108,9 +115,9 @@ class RecipeView extends View {
       <svg class="recipe__icon">
         <use href="${icons}#icon-check"></use>
       </svg>
-      <div class="recipe__quantity">${new Fraction(
-        ingred.quantity ?? 0
-      ).toString()}</div>
+      <div class="recipe__quantity">${
+        ingred.quantity??0
+      }</div>
           <div class="recipe__description">
           <span class="recipe__unit">${ingred.unit}</span>
           ${ingred.description}
