@@ -1,7 +1,7 @@
 import { async } from 'regenerator-runtime';
 import { TIMEOUT_SEC } from './config';
 
-//setting a time for loading the page so if there is super bad conncetion the code willl not run after a certain time
+//setting a time for loading the page so if there is super bad conncetion the code will not run after a certain time
 const timeout = function (s) {
   return new Promise(function (_, reject) {
     setTimeout(function () {

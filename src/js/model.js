@@ -14,7 +14,7 @@ export const state = {
   bookmarks: [],
 };
 
-const createRecipeObject = function (data) {
+const createRecipeObject =function (data) {
   const { recipe } = data.data;
   return {
     id: recipe.id,

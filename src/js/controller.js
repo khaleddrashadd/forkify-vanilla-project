@@ -6,15 +6,10 @@ import paginationView from './views/paginationView';
 import bookmarkView from './views/bookmarkView';
 import addRecipeView from './views/addRecipeView';
 import { MODAL_CLOSE_SEC } from './config';
-//with PARCEL we can import anything like image folder to display the correct path
+
 import 'core-js/stable';
 import 'regenerator-runtime';
 
-//const recipeContainer = document.querySelector('.recipe');
-
-// https://forkify-api.herokuapp.com/v2
-
-///////////////////////////////////////
 
 const controlRecipes = async function () {
   try {
